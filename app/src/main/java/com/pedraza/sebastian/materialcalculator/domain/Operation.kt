@@ -1,7 +1,7 @@
 package com.pedraza.sebastian.materialcalculator.domain
 
 enum class Operation(val symbol: Char) {
-    Addition('+'),
+    Add('+'),
     Subtract('-'),
     Multiply('x'),
     Divide('/'),
