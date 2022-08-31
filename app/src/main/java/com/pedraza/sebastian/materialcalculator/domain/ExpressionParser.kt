@@ -40,13 +40,13 @@ class ExpressionParser(private val calculation: String) {
 
     private fun parseParenthesis(currChar: Char, result: MutableList<ExpressionPart>) {
         result.add(
-            ExpressionPart.Parenthesis(
+            ExpressionPart.Parentheses(
                 when (currChar) {
                     '(' -> {
-                        ParenthesisType.Opening
+                        ParenthesesType.Opening
                     }
                     ')' -> {
-                        ParenthesisType.Closing
+                        ParenthesesType.Closing
                     }
                     else -> {
                         throw IllegalArgumentException("Parenthesis type not supported")

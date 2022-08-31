@@ -20,7 +20,7 @@ class ExpressionParserTest {
             ExpressionPart.Number(5.0),
             ExpressionPart.Op(Operation.Divide),
             ExpressionPart.Number(4.0),
-            ExpressionPart.Op(Operation.Addition),
+            ExpressionPart.Op(Operation.Add),
             ExpressionPart.Number(45.0),
             ExpressionPart.Op(Operation.Subtract),
             ExpressionPart.Number(4.0),
@@ -38,21 +38,21 @@ class ExpressionParserTest {
         //Do something with given
         val actual = expressionParser.parse()
         val expected = mutableListOf(
-            ExpressionPart.Parenthesis(ParenthesisType.Opening),
+            ExpressionPart.Parentheses(ParenthesesType.Opening),
             ExpressionPart.Number(4.0),
             ExpressionPart.Op(Operation.Multiply),
             ExpressionPart.Number(5.0),
-            ExpressionPart.Parenthesis(ParenthesisType.Closing),
+            ExpressionPart.Parentheses(ParenthesesType.Closing),
             ExpressionPart.Op(Operation.Divide),
             ExpressionPart.Number(4.0),
-            ExpressionPart.Op(Operation.Addition),
+            ExpressionPart.Op(Operation.Add),
             ExpressionPart.Number(45.0),
             ExpressionPart.Op(Operation.Subtract),
-            ExpressionPart.Parenthesis(ParenthesisType.Opening),
+            ExpressionPart.Parentheses(ParenthesesType.Opening),
             ExpressionPart.Number(4.0),
             ExpressionPart.Op(Operation.Percent),
             ExpressionPart.Number(5.0),
-            ExpressionPart.Parenthesis(ParenthesisType.Closing),
+            ExpressionPart.Parentheses(ParenthesesType.Closing),
 
             )
         //Then assert
