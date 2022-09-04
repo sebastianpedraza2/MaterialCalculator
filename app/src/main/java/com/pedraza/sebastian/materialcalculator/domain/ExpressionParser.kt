@@ -11,7 +11,7 @@ class ExpressionParser(private val calculation: String) {
                     i = parseNumber(i, result)
                     continue
                 }
-                calculation[i] in allOperations -> {
+                calculation[i] in operationSymbols -> {
                     result.add(ExpressionPart.Op(operationFromSymbol(calculation[i])))
                 }
                 calculation[i] in "()" -> {
