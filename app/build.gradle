@@ -20,11 +20,30 @@ android {
     }
 
     buildTypes {
+        staging {
+            applicationIdSuffix ".staging"
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    flavorDimensions "paidMode"
+    productFlavors {
+        paid {
+            dimension "paidMode"
+            applicationIdSuffix ".paid"
+        }
+        free {
+            dimension "paidMode"
+            applicationIdSuffix ".free"
+        }
+    }
+
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8

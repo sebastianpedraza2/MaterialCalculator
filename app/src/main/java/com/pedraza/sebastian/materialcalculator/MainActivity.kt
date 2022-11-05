@@ -10,6 +10,7 @@ import com.pedraza.sebastian.materialcalculator.ui.theme.MaterialCalculatorTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        Constants.BASE_URL
         super.onCreate(savedInstanceState)
         setContent {
             MaterialCalculatorTheme {
