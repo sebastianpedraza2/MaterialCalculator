@@ -3,13 +3,13 @@ App developed using a production ready merging strategy hooked up with CI/CD pip
 
 Bitrise was used to integrate CI/CD pipelines 
 
-## MERGING STRATEGY USED: 
-MASTER, STAGING, DEVELOPMENT
+## Merging strategy used:
+Development -> Staging -> Master
 
-## PIPELINES IMPLEMENTED:
-* **CI WORKFLOW:** Used to integrate changes to the development branch.
-* **CD  STAGING WORKFLOW:** Used to send a pre-release APK to testers using Firebase Distribution.
-* **CD PRODUCTION WORKFLOW:** Used to update a production ready APK and send it to the userbase in Google play.
+## Pipelines implemented:
+* **CI workflow:** Used to integrate changes to the development branch.
+* **CD staging workflow:** Used to send a pre-release APK to testers using Firebase Distribution.
+* **CD production workflow:** Used to update a production ready APK and send it to the userbase in Google play.
 ## Screenshots
 
 <img width="333" alt="image" src="https://user-images.githubusercontent.com/46971682/227280278-a9a2e6c6-2637-4fbb-b5dd-2032e1bbcc60.png">
